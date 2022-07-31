@@ -1193,7 +1193,7 @@ define_enum! {
 }
 
 // Logging function. Takes log level argument as well.
-pub type LogPrintfFn = unsafe extern "C" fn(level: LogLevel, fmt: *const libc::c_char);
+pub type LogPrintfFn = unsafe extern "C" fn(level: LogLevel, fmt: *const libc::c_char, args: ...);
 
 #[derive(Clone, Debug)]
 #[repr(C)]
